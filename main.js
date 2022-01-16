@@ -46,7 +46,7 @@ let animate = (ctx, images, animation, callback) => {
             ctx.drawImage(image, 0, 0, 500, 500);
         }, index * 100);
     });
-    setTimeout(callback, images[animantion].length * 100);
+    setTimeout(callback, images[animation].length * 100);
 };
 
 loadImages((images) => {
@@ -65,5 +65,12 @@ loadImages((images) => {
 
     document.getElementById("punch").addEventListener("click", () => {
         animationQueue.push("punch");
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight")
+            // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+            animationQueue.push("kick");
+        if (event.key === "ArrowLeft") animationQueue.push("punch");
     });
 });
