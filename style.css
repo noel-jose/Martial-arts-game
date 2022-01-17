@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+}
+h1 {
+    color: black;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 0.2em gray;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+#mycanvas {
+    display: block;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        margin: 20px auto;
+        padding: 10px;
+    }
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
